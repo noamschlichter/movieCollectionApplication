@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/addMovies"
+        android:icon="@drawable/add"
+        android:title="addIcon"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/addFromInternetItem"
+                android:title="@string/addFromInternet" />
+
+            <item
+                android:id="@+id/addMenuallyItem"
+                android:title="@string/addManually" />
+
+
+        </menu>
+
+    </item>
+
+
+    <item
+        android:id="@+id/deleteAllMoviesItem"
+        android:title="@string/deleteAllMovies" />
+
+    <item
+        android:id="@+id/exitItem"
+        android:title="@string/exit" />
+
+</menu>

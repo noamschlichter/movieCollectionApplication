@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Movie Collection</string>
+    <string name="addManually">Add Manually</string>
+    <string name="addFromInternet">Add From Internet</string>
+    <string name="titleMustBeFilled">Movie Title has to be filled</string>
+    <string name="movieExiest">Movie title is already exist</string>
+    <string name="deleteAllMovies">Delete All Movies</string>
+    <string name="exit">Exit</string>
+    <string name="search">search</string>
+    <string name="cancel">Cancel</string>
+    <string name="subject">Subject</string>
+    <string name="url">URL</string>
+    <string name="enter_description">Enter description</string>
+    <string name="enter_link">Enter Link</string>
+    <string name="show">Show</string>
+    <string name="ok">OK</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="collection_is_empty">collection is empty</string>
+
+
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="noam.moviecollection.AddFromInternet"
+    android:background="@raw/pattern_m">
+
+    <LinearLayout
+        android:id="@+id/searchLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/text_box">
+
+        <EditText
+            android:id="@+id/movieSearchEditText"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            style="@style/textBoxStyle" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchButton_onClick"
+            android:text="@string/search"
+            android:layout_margin="10dp"
+            android:background="@drawable/button"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/movieListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cancelButton"
+        android:layout_below="@id/searchLinearLayout"
+        android:background="@drawable/text_box"
+        android:layout_margin="5dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:onClick="cancelButton_onClick"
+        android:text="@string/cancel"
+        android:background="@drawable/button"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

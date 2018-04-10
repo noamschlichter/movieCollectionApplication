@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@raw/pattern_m"
+    android:padding="10dp"
+    tools:context="noam.moviecollection.AddManually">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/parentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/subjectRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/text_box">
+
+                <TextView
+                    android:id="@+id/subjectTextView"
+                    style="@style/textBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/subject"
+                    android:textSize="14sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/subjectTextView">
+
+                    <EditText
+                        android:id="@+id/titleEditText"
+                        style="@style/textBoxStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"/>
+
+
+                </HorizontalScrollView>
+
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/text_box">
+
+                <EditText
+                    android:id="@+id/descriptionEditText"
+                    style="@style/textBoxStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="@string/enter_description" />
+
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/urlLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/text_box"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/urlTextView"
+                    style="@style/textBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/url" />
+
+                <HorizontalScrollView
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/urlEditText"
+                        style="@style/textBoxStyle"
+                        android:layout_width="220dp"
+                        android:layout_height="match_parent"
+                        android:hint="@string/enter_link" />
+
+
+                </HorizontalScrollView>
+
+
+                <Button
+                    android:id="@+id/showButton"
+                    style="@style/textBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button"
+                    android:onClick="showImageButton_onClick"
+                    android:text="@string/show"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageImageView"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/none_image"
+                android:backgroundTint="@color/red"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/okAndCancelRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/okButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button"
+                    android:onClick="okButton_onClick"
+                    android:text="@string/ok" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@+id/okButton"
+                    android:background="@drawable/button"
+                    android:onClick="cancelButton_onClick"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
